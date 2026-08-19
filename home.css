@@ -1,0 +1,1750 @@
+/* ===========================================================
+   HOME.CSS
+   Home Page Styles
+   Part 1
+   Author : Kaushalya Gumphalwar
+   =========================================================== */
+
+
+/* ===========================================================
+   HERO SECTION
+   =========================================================== */
+
+.hero{
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding-top: 180px;
+
+    padding-bottom: 80px;
+
+    overflow: hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(14,165,233,.13),
+        transparent 32%
+    ),
+
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(124,58,237,.13),
+        transparent 34%
+    ),
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(37,99,235,.10),
+        transparent 38%
+    ),
+
+    linear-gradient(
+        135deg,
+        #070b14 0%,
+        #0b1220 45%,
+        #10142a 100%
+    );
+
+}
+
+
+/* ===========================================================
+   HERO CONTAINER
+   =========================================================== */
+
+.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1.15fr 0.85fr;
+
+    grid-template-areas:
+        "content profile"
+        "content stats";
+
+    column-gap:80px;
+
+    row-gap:40px;
+
+    align-items:start;
+
+}
+
+
+/* ===========================================================
+   HERO CONTENT
+   =========================================================== */
+
+.hero-content{
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    grid-area:content;
+
+}
+
+
+/* ===========================================================
+   HERO TEXT
+   =========================================================== */
+
+.hero-text{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+/* ===========================================================
+   HERO BADGE
+   =========================================================== */
+
+.hero .badge{
+
+    margin-bottom: 24px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+/* ===========================================================
+                HERO BADGE HOVER
+=========================================================== */
+
+.hero .badge:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(56,189,248,.65);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.30),
+        0 0 25px rgba(56,189,248,.22),
+        0 0 50px rgba(99,102,241,.10);
+
+}
+
+
+/* ===========================================================
+   HERO TITLE
+   =========================================================== */
+
+.hero-title{
+
+    max-width: 750px;
+
+    margin-bottom: 24px;
+
+    color: var(--color-heading);
+
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
+
+    font-weight: var(--font-bold);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero-title .text-gradient{
+
+    display: inline-block;
+
+    transition:
+        filter .35s ease,
+        transform .35s ease;
+
+}
+
+.hero-title .text-gradient:hover{
+
+    filter:drop-shadow(
+        0 0 18px rgba(56,189,248,.65)
+    );
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ===========================================================
+   HERO SUBTITLE
+   =========================================================== */
+
+.hero-subtitle{
+
+    max-width: 720px;
+
+    margin-bottom: 30px;
+
+    color: var(--color-text);
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+
+    font-weight: var(--font-semibold);
+
+    line-height: 1.5;
+
+}
+
+
+.hero-subtitle .text-gradient{
+
+    font-weight: var(--font-bold);
+
+}
+
+
+/* ===========================================================
+                HERO DESCRIPTION
+=========================================================== */
+
+.hero-description{
+
+    max-width:720px;
+
+    margin-bottom:42px;
+
+    padding:24px 28px;
+
+    color:var(--color-text-light);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    background:rgba(15,23,42,.45);
+
+    border:1px solid rgba(96,165,250,.18);
+
+    border-radius:18px;
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* ===========================================================
+            HERO DESCRIPTION HOVER
+=========================================================== */
+
+.hero-description:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(56,189,248,.55);
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.30),
+        0 0 28px rgba(56,189,248,.14);
+
+}
+
+/* ===========================================================
+   HERO TEXT SPACING
+   =========================================================== */
+
+.hero-text>*:last-child{
+
+    margin-bottom: 0;
+
+}
+
+
+/* ===========================================================
+   HERO CONTENT ANIMATION PREP
+   =========================================================== */
+
+.hero-text{
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ===========================================================
+   END OF PART 1
+   =========================================================== */
+
+
+/* ===========================================================
+   HOME.CSS
+   Part 2
+   Hero Buttons • Hero Highlights • Hero Image
+   =========================================================== */
+
+
+/* ===========================================================
+   HERO BUTTONS
+   =========================================================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:48px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ===========================================================
+   HERO HIGHLIGHTS
+   =========================================================== */
+
+.hero-highlights{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+
+.highlight-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--color-border);
+
+    border-radius:999px;
+
+    transition:all var(--transition-normal);
+
+}
+
+
+.highlight-item:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(0,229,255,.35);
+
+    box-shadow:var(--shadow-glow);
+
+}
+
+
+.highlight-item i{
+
+    color:var(--color-primary);
+
+    font-size:1rem;
+
+}
+
+
+.highlight-item span{
+
+    color:var(--color-text);
+
+    font-size:.95rem;
+
+    font-weight:var(--font-medium);
+
+}
+
+
+/* ===========================================================
+   HERO IMAGE
+   =========================================================== */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    grid-area:profile;
+
+}
+
+
+/* ===========================================================
+   PROFILE CARD
+   =========================================================== */
+
+.profile-card{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:420px;
+
+    padding:40px;
+
+    border-radius:var(--radius-xl);
+
+    overflow:hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+}
+
+
+.profile-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(0,229,255,0.20),
+        0 0 50px rgba(124,77,255,0.15);
+
+}
+
+
+/* ===========================================================
+   PROFILE GLOW
+   =========================================================== */
+
+.profile-glow{
+
+    position:absolute;
+
+    inset:-30%;
+
+    background:radial-gradient(
+        circle,
+        rgba(0,229,255,.20),
+        rgba(124,77,255,.10),
+        transparent 70%
+    );
+
+    filter:blur(50px);
+
+    z-index:0;
+
+}
+
+
+/* ===========================================================
+   PROFILE IMAGE
+   =========================================================== */
+
+.profile-image{
+
+    position:relative;
+
+    z-index:2;
+
+    width:280px;
+
+    height:280px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+.profile-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .5s ease;
+
+}
+
+
+.profile-card:hover .profile-image img{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ===========================================================
+   PROFILE INFO
+   =========================================================== */
+
+.profile-info{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+
+.profile-info h3{
+
+    color:var(--color-heading);
+
+    font-size:1.5rem;
+
+    font-weight:var(--font-bold);
+
+    margin-bottom:10px;
+
+}
+
+
+.profile-info p{
+
+    color:var(--color-text-light);
+
+    font-size:1rem;
+
+}
+
+
+/* ===========================================================
+   END OF PART 2
+   =========================================================== */
+
+
+/* ===========================================================
+   HOME.CSS
+   Part 3
+   Hero Stats • Featured Projects Layout
+   =========================================================== */
+
+
+/* ===========================================================
+   HERO STATS
+   =========================================================== */
+
+.hero-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+
+    margin-top:0;
+
+    grid-area:stats;
+
+}
+
+
+.hero-stats .stats-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:170px;
+
+}
+
+
+.hero-stats .stats-number{
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* ===========================================================
+   FEATURED PROJECTS SECTION
+   =========================================================== */
+
+#featured-projects{
+
+    position:relative;
+
+    padding-top:80px;
+
+    padding-bottom:50px;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(0,229,255,.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(124,77,255,.10),
+            transparent 40%
+        );
+
+}
+
+
+/* ===========================================================
+   SECTION HEADER
+   =========================================================== */
+
+.section-header{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+
+.section-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 20px;
+
+    margin-bottom:20px;
+
+    border-radius:999px;
+
+    background:rgba(0,229,255,.08);
+
+    border:1px solid rgba(0,229,255,.18);
+
+    color:var(--color-primary);
+
+    font-size:.9rem;
+
+    font-weight:var(--font-semibold);
+
+}
+
+
+/* ===========================================================
+   SECTION LABEL
+=========================================================== */
+
+.section-label{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:.75rem;
+
+    font-weight:var(--font-semibold);
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:var(--color-primary);
+
+    background:rgba(0,229,255,.08);
+
+    border:1px solid rgba(0,229,255,.18);
+
+}
+
+
+/* ===========================================================
+   PROJECTS BADGE HOVER
+=========================================================== */
+
+.projects-badge{
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+.projects-badge:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(0,229,255,.45);
+
+    box-shadow:
+        0 0 20px rgba(0,229,255,.35),
+        0 0 40px rgba(124,77,255,.20);
+
+}
+
+
+.section-title{
+
+    margin-bottom:20px;
+
+    color:var(--color-heading);
+
+    font-size:clamp(2.2rem,4vw,3.5rem);
+
+    font-weight:var(--font-bold);
+
+    line-height:1.2;
+
+}
+
+
+.section-description{
+
+    color:var(--color-text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+}
+
+
+/* ===========================================================
+   PROJECT GRID
+   =========================================================== */
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:32px;
+
+}
+
+
+/* ===========================================================
+   PROJECT CONTENT
+   =========================================================== */
+
+.project-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+
+/* ===========================================================
+   PROJECT BADGE
+   =========================================================== */
+
+.project-content .badge{
+
+    align-self:flex-start;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ===========================================================
+   PROJECT TITLE
+   =========================================================== */
+
+.project-content .card-title{
+
+    margin-bottom:18px;
+
+}
+
+
+/* ===========================================================
+   PROJECT DESCRIPTION
+   =========================================================== */
+
+.project-content .card-description{
+
+    flex:1;
+
+}
+
+
+/* ===========================================================
+   PROJECT TECH STACK
+   =========================================================== */
+
+.project-tech{
+
+    margin-top:20px;
+
+    margin-bottom:24px;
+
+}
+
+
+/* ===========================================================
+   PROJECT LINK
+   =========================================================== */
+
+.link-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:auto;
+
+    color:var(--color-primary);
+
+    font-weight:var(--font-semibold);
+
+    transition:all var(--transition-fast);
+
+}
+
+
+.link-btn:hover{
+
+    gap:16px;
+
+}
+
+
+/* ===========================================================
+   SECTION ACTION
+   =========================================================== */
+
+.section-action{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:60px;
+
+}
+
+
+/* ===========================================================
+   END OF PART 3
+   =========================================================== */
+
+
+/* ===========================================================
+   HOME.CSS
+   Part 4A
+   Featured Project Cards
+   =========================================================== */
+
+
+/* ===========================================================
+   PROJECT CARD
+   =========================================================== */
+
+.project-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    height:100%;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-glass-bg);
+
+    border:1px solid var(--color-glass-border);
+
+    backdrop-filter:var(--glass-blur);
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+
+}
+
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,229,255,.25);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 30px rgba(0,229,255,.15);
+
+}
+
+
+/* ===========================================================
+   PROJECT IMAGE
+   =========================================================== */
+
+.project-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:16 / 9;
+
+    background:var(--color-bg-secondary);
+
+}
+
+
+.project-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .7s ease,
+        filter .5s ease;
+
+}
+
+
+
+.project-card:hover .project-image img{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.08);
+
+}
+
+
+/* ===========================================================
+   IMAGE OVERLAY
+   =========================================================== */
+
+.project-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to top,
+
+        rgba(11,15,25,.55),
+
+        transparent
+
+    );
+
+    opacity:0;
+
+    transition:opacity var(--transition-normal);
+
+    z-index:1;
+
+}
+
+
+.project-card:hover .project-image::before{
+
+    opacity:1;
+
+}
+
+
+/* ===========================================================
+   PROJECT CONTENT
+   =========================================================== */
+
+.project-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:30px;
+
+}
+
+
+/* ===========================================================
+   PROJECT TITLE
+   =========================================================== */
+
+.project-content .card-title{
+
+    margin-bottom:16px;
+
+    color:var(--color-heading);
+
+    transition:color var(--transition-fast);
+
+}
+
+
+.project-card:hover .card-title{
+
+    color:var(--color-primary);
+
+}
+
+
+/* ===========================================================
+   PROJECT DESCRIPTION
+   =========================================================== */
+
+.project-content .card-description{
+
+    margin-bottom:22px;
+
+    color:var(--color-text-light);
+
+    line-height:1.8;
+
+    flex:1;
+
+}
+
+
+/* ===========================================================
+   HOME.CSS
+   Part 4B
+   Project Tech Stack • Link Button • Card Polish
+   =========================================================== */
+
+
+/* ===========================================================
+   PROJECT TECH STACK
+   =========================================================== */
+
+.project-tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:28px;
+
+}
+
+
+/* ===========================================================
+   TECH TAG
+   =========================================================== */
+
+.project-tech .tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:var(--radius-pill);
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--color-text);
+
+    font-size:.85rem;
+
+    font-weight:var(--font-medium);
+
+    transition:
+        all var(--transition-normal);
+
+}
+
+
+.project-tech .tag:hover{
+
+    color:var(--color-primary);
+
+    border-color:rgba(0,229,255,.30);
+
+    background:rgba(0,229,255,.08);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ===========================================================
+   PROJECT LINK BUTTON
+   =========================================================== */
+
+.link-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:auto;
+
+    color:var(--color-primary);
+
+    font-weight:var(--font-semibold);
+
+    text-decoration:none;
+
+    transition:all var(--transition-normal);
+
+}
+
+
+.link-btn i{
+
+    font-size:1rem;
+
+    transition:
+        transform var(--transition-normal);
+
+}
+
+
+.project-card:hover .link-btn{
+
+    letter-spacing:.3px;
+
+}
+
+
+.project-card:hover .link-btn i{
+
+    transform:translateX(6px);
+
+}
+
+
+/* ===========================================================
+   PROJECT CARD GLOW
+   =========================================================== */
+
+.project-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(0,229,255,.08),
+
+        transparent 35%,
+
+        transparent 70%,
+
+        rgba(124,77,255,.08)
+
+    );
+
+    transition:opacity var(--transition-normal);
+
+}
+
+
+.project-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+/* ===========================================================
+   PROJECT IMAGE SHINE EFFECT
+   =========================================================== */
+
+.project-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:left .8s ease;
+
+    z-index:2;
+
+}
+
+
+.project-card:hover .project-image::after{
+
+    left:140%;
+
+}
+
+
+/* ===========================================================
+   PROJECT CARD BORDER ANIMATION
+   =========================================================== */
+
+.project-card{
+
+    isolation:isolate;
+
+}
+
+
+/* ===========================================================
+   SECTION BUTTON
+   =========================================================== */
+
+.section-action{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+/* ===========================================================
+   END OF PART 4B
+   =========================================================== */
+
+/* ===========================================================
+   HOME.CSS
+   Part 5
+   Call To Action (CTA)
+   =========================================================== */
+
+
+/* ===========================================================
+   CTA SECTION
+   =========================================================== */
+
+#cta{
+
+    position:relative;
+
+    padding-top:80px;
+
+    padding-bottom:70px;
+
+}
+
+
+/* ===========================================================
+   CTA CARD
+   =========================================================== */
+
+.cta-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding:55px 50px;
+
+    text-align:center;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-glass-bg);
+
+    border:1px solid var(--color-glass-border);
+
+    backdrop-filter:var(--glass-blur);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+
+.cta-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.40),
+        0 0 20px rgba(255,255,255,.25),
+        0 0 45px rgba(255,255,255,.15);
+
+}
+
+
+/* ===========================================================
+   CTA BACKGROUND GLOW
+   =========================================================== */
+
+.cta-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-30%;
+
+    background:radial-gradient(
+
+        circle,
+
+        rgba(0,229,255,.14),
+
+        rgba(124,77,255,.08),
+
+        transparent 72%
+
+    );
+
+    filter:blur(60px);
+
+    z-index:0;
+
+}
+
+
+.cta-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* ===========================================================
+   CTA LABEL
+   =========================================================== */
+
+.cta-card .section-label{
+
+    margin-bottom:24px;
+
+}
+
+
+/* ===========================================================
+   CTA TITLE
+   =========================================================== */
+
+.cta-card .section-title{
+
+    max-width:760px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    margin-bottom:24px;
+
+}
+
+
+/* ===========================================================
+   CTA DESCRIPTION
+   =========================================================== */
+
+.cta-card .section-description{
+
+    max-width:760px;
+
+    margin:0 auto 42px;
+
+    color:var(--color-text-light);
+
+    line-height:1.9;
+
+}
+
+
+/* ===========================================================
+   CTA BUTTON GROUP
+   =========================================================== */
+
+.cta-card .hero-buttons{
+
+    justify-content:center;
+
+    margin-bottom:0;
+
+}
+
+
+/* ===========================================================
+   CTA BUTTON HOVER
+   =========================================================== */
+
+.cta-card .btn{
+
+    min-width:220px;
+
+}
+
+
+/* ===========================================================
+   CTA DECORATIVE BORDER
+   =========================================================== */
+
+.cta-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(0,229,255,.25),
+
+        transparent,
+
+        rgba(124,77,255,.25)
+
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+
+/* ===========================================================
+   END OF PART 5
+   =========================================================== */
+
+
+/* ===========================================================
+   HOME.CSS
+   Part 6
+   Home Utilities & Section Polish
+   =========================================================== */
+
+
+/* ===========================================================
+   HOME SECTION SPACING
+   =========================================================== */
+
+.hero,
+#featured-projects,
+#cta{
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ===========================================================
+   SECTION BACKGROUND GLOW
+   =========================================================== */
+
+.hero::before,
+#featured-projects::before,
+#cta::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 550px;
+
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+
+        circle,
+
+        rgba(0,229,255,.08),
+
+        transparent 70%
+
+    );
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.hero::before{
+
+    top: -180px;
+
+    right: -120px;
+
+}
+
+
+#featured-projects::before{
+
+    top: 40%;
+
+    left: -220px;
+
+}
+
+
+#cta::before{
+
+    bottom: -180px;
+
+    right: -180px;
+
+}
+
+
+/* ===========================================================
+   ENSURE CONTENT STAYS ABOVE GLOW
+   =========================================================== */
+
+.hero .container,
+#featured-projects .container,
+#cta .container{
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ===========================================================
+   SECTION DIVIDER
+   =========================================================== */
+
+#featured-projects{
+
+    border-top: 1px solid rgba(255,255,255,.05);
+
+}
+
+
+#cta{
+
+    border-top: 1px solid rgba(255,255,255,.05);
+
+}
+
+
+/* ===========================================================
+   GLASS CARD POLISH
+   =========================================================== */
+
+.profile-card,
+.project-card,
+.cta-card{
+
+    backdrop-filter: var(--glass-blur);
+
+    -webkit-backdrop-filter: var(--glass-blur);
+
+}
+
+
+/* ===========================================================
+   IMAGE RADIUS
+   =========================================================== */
+
+.project-image img,
+.profile-image img{
+
+    border-radius: inherit;
+
+}
+
+
+/* ===========================================================
+   IMPROVE TEXT RENDERING
+   =========================================================== */
+
+.hero-title,
+.section-title{
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* ===========================================================
+   FOCUS STATES
+   =========================================================== */
+
+.btn:focus-visible,
+.link-btn:focus-visible{
+
+    outline: 2px solid var(--color-primary);
+
+    outline-offset: 4px;
+
+}
+
+
+/* ===========================================================
+   IMAGE PERFORMANCE
+   =========================================================== */
+
+.project-image img,
+.profile-image img{
+
+    will-change: transform;
+
+}
+
+
+/* ===========================================================
+   PREVENT HORIZONTAL SCROLL
+   =========================================================== */
+
+.hero,
+#featured-projects,
+#cta{
+
+    max-width: 100%;
+
+}
+
+
+/* ===========================================================
+   END OF HOME.CSS
+   =========================================================== */
